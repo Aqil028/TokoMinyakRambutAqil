@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cek Aroma Cocok - Aqil Hair Oil</title>
+  <!-- CSS Utama (Desktop / Default) -->
+  <link rel="stylesheet" href="aqil_style.css">
+
+  <!-- CSS Terpisah Khusus Mobile -->
+  <link rel="stylesheet" href="aqil_mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+
+  <nav id="aqil_navbar">
+    <a href="index.html" class="aqil_logo">AQIL HAIR OIL</a>
+    <button class="aqil_hamburger" id="aqil_btn_menu">&#9776;</button>
+    <ul class="aqil_menu" id="aqil_nav_list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Katalog (13)</a></li>
+      <li><a href="detail.html?id=1">Detail Produk</a></li>
+      <li><a href="promo.html">Promo Paket</a></li>
+      <li><a href="panduan.html" class="aqil_aktif_link">Cek Cocok</a></li>
+      <li><a href="tentang.html">Tentang Kami</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main class="aqil_container">
+    <h1 class="aqil_judul_halaman">Konsultasi Pilihan Paket Minyak Rambut</h1>
+    <p class="aqil_subjudul">Jawab 2 pertanyaan singkat di bawah ini untuk menemukan rekomendasi paket dari 13 katalog kami.</p>
+
+    <div class="aqil_kuis_box">
+      <div class="aqil_form_group">
+        <label class="aqil_label" for="aqil_pilih_aroma">1. Karakter wangi apa yang paling kamu sukai?</label>
+        <select id="aqil_pilih_aroma" class="aqil_select">
+          <option value="bubblegum">Manis &amp; Ceria (Bubblegum)</option>
+          <option value="vanilla">Lembut, Hangat &amp; Elegan (Vanilla)</option>
+          <option value="lemonyuzu">Segar Sitrus &amp; Anti Lepek (Lemon Yuzu)</option>
+          <option value="mix_bv">Suka Manis Lembut (Campuran Bubblegum &amp; Vanilla)</option>
+          <option value="mix_lv">Suka Segar &amp; Lembut (Campuran Lemon Yuzu &amp; Vanilla)</option>
+          <option value="mix_bl">Suka Segar &amp; Manis (Campuran Bubblegum &amp; Lemon Yuzu)</option>
+          <option value="all">Ingin Coba Semua Varian Sekaligus!</option>
+        </select>
+      </div>
+
+      <div class="aqil_form_group">
+        <label class="aqil_label" for="aqil_pilih_jumlah">2. Berapa botol kebutuhan stokmu saat ini?</label>
+        <select id="aqil_pilih_jumlah" class="aqil_select">
+          <option value="1">1 Botol (Untuk coba dulu)</option>
+          <option value="2">2 Botol (Paket Duo Hemat)</option>
+          <option value="3">3 Botol (Paket Trio Stok Bulanan)</option>
+        </select>
+      </div>
+
+      <button type="button" class="aqil_btn_pesan" onclick="aqilCekRekomendasi()">Lihat Rekomendasi Paket</button>
+
+      <!-- Kotak Hasil Rekomendasi JS -->
+      <div id="aqil_hasil_kuis" class="aqil_hasil_kuis"></div>
+    </div>
+  </main>
+
+  <footer id="aqil_footer">
+    <p>&copy; 2026 Aqil Hair Oil - Pemrograman Internet UTS. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aqil_script.js"></script>
+</body>
+</html>

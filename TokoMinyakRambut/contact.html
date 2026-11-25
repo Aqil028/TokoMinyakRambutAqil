@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami - Aqil Hair Oil</title>
+  <!-- CSS Utama (Desktop / Default) -->
+  <link rel="stylesheet" href="aqil_style.css">
+
+  <!-- CSS Terpisah Khusus Mobile -->
+  <link rel="stylesheet" href="aqil_mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+
+  <nav id="aqil_navbar">
+    <a href="index.html" class="aqil_logo">AQIL HAIR OIL</a>
+    <button class="aqil_hamburger" id="aqil_btn_menu">&#9776;</button>
+    <ul class="aqil_menu" id="aqil_nav_list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Katalog (13)</a></li>
+      <li><a href="detail.html?id=1">Detail Produk</a></li>
+      <li><a href="promo.html">Promo Paket</a></li>
+      <li><a href="panduan.html">Cek Cocok</a></li>
+      <li><a href="tentang.html">Tentang Kami</a></li>
+      <li><a href="contact.html" class="aqil_aktif_link">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main class="aqil_container">
+    <h1 class="aqil_judul_halaman">Hubungi Pemilik Toko</h1>
+    <p class="aqil_subjudul">Kirimkan pertanyaan, kritik, saran, atau pesan pemesanan paket minyak rambut langsung kepada kami.</p>
+
+    <div class="aqil_kontak_wrapper">
+      <!-- Informasi Toko -->
+      <div class="aqil_info_toko">
+        <h3>Informasi Aqil Hair Oil</h3>
+        <p><strong>Pemilik:</strong> Aqil</p>
+        <p><strong>Alamat:</strong> Jl. Pembela Tanah Air (PETA), Kota Tasikmalaya, Jawa Barat</p>
+        <p><strong>Jam Operasional:</strong> Senin - Sabtu (08.00 - 20.00 WIB)</p>
+        <p><strong>Email:</strong> aqilhairoil@gmail.com</p>
+        <p><strong>WhatsApp:</strong> 0812-3456-7890</p>
+      </div>
+
+      <!-- Form Kirim Pesan ke Pemilik Website -->
+      <div class="aqil_form_box">
+        <h3>Form Kirim Pesan</h3>
+        <form id="aqil_form_kontak" onsubmit="aqilKirimPesan(event)">
+          <div class="aqil_form_group">
+            <label class="aqil_label" for="aqil_input_nama">Nama Lengkap *</label>
+            <input type="text" id="aqil_input_nama" class="aqil_input" placeholder="Masukkan nama Anda" required>
+          </div>
+
+          <div class="aqil_form_group">
+            <label class="aqil_label" for="aqil_input_email">Email / No. WhatsApp *</label>
+            <input type="text" id="aqil_input_email" class="aqil_input" placeholder="Contoh: budi@email.com atau 0812xxxx" required>
+          </div>
+
+          <div class="aqil_form_group">
+            <label class="aqil_label" for="aqil_input_paket">Pilih Paket Produk (Opsional)</label>
+            <select id="aqil_input_paket" class="aqil_select">
+              <option value="Pertanyaan Umum">-- Pertanyaan Umum --</option>
+              <option value="1 Botol Bubblegum">1. 1 Botol Varian Bubblegum (Rp 35.000)</option>
+              <option value="1 Botol Vanilla">2. 1 Botol Varian Vanilla (Rp 35.000)</option>
+              <option value="1 Botol Lemon Yuzu">3. 1 Botol Varian Lemon Yuzu (Rp 35.000)</option>
+              <option value="2 Botol Bubblegum">4. Paket 2 Botol Bubblegum (Rp 65.000)</option>
+              <option value="2 Botol Vanilla">5. Paket 2 Botol Vanilla (Rp 65.000)</option>
+              <option value="2 Botol Lemon Yuzu">6. Paket 2 Botol Lemon Yuzu (Rp 65.000)</option>
+              <option value="2 Botol Bubblegum & Vanilla">7. Paket 2 Botol Bubblegum &amp; Vanilla (Rp 65.000)</option>
+              <option value="2 Botol Lemon Yuzu & Vanilla">8. Paket 2 Botol Lemon Yuzu &amp; Vanilla (Rp 65.000)</option>
+              <option value="2 Botol Bubblegum & Lemon Yuzu">9. Paket 2 Botol Bubblegum &amp; Lemon Yuzu (Rp 65.000)</option>
+              <option value="3 Botol All Varian">10. Paket 3 Botol All Varian (Rp 95.000)</option>
+              <option value="3 Botol Bubblegum">11. Paket 3 Botol Bubblegum (Rp 95.000)</option>
+              <option value="3 Botol Vanilla">12. Paket 3 Botol Vanilla (Rp 95.000)</option>
+              <option value="3 Botol Lemon Yuzu">13. Paket 3 Botol Lemon Yuzu (Rp 95.000)</option>
+            </select>
+          </div>
+
+          <div class="aqil_form_group">
+            <label class="aqil_label" for="aqil_input_pesan">Isi Pesan *</label>
+            <textarea id="aqil_input_pesan" class="aqil_textarea" rows="4" placeholder="Tulis pesan atau detail pesanan Anda di sini..." required></textarea>
+          </div>
+
+          <button type="submit" class="aqil_btn_pesan">Kirim Pesan Sekarang</button>
+        </form>
+
+        <!-- Notifikasi Setelah Pesan Terkirim -->
+        <div id="aqil_notifikasi_sukses" class="aqil_notifikasi_sukses"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="aqil_footer">
+    <p>&copy; 2026 Aqil Hair Oil - Pemrograman Internet UTS. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aqil_script.js"></script>
+</body>
+</html>

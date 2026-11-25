@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Produk - Aqil Hair Oil</title>
+  <!-- CSS Utama (Desktop / Default) -->
+  <link rel="stylesheet" href="aqil_style.css">
+
+  <!-- CSS Terpisah Khusus Mobile -->
+  <link rel="stylesheet" href="aqil_mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+
+  <nav id="aqil_navbar">
+    <a href="index.html" class="aqil_logo">AQIL HAIR OIL</a>
+    <button class="aqil_hamburger" id="aqil_btn_menu">&#9776;</button>
+    <ul class="aqil_menu" id="aqil_nav_list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Katalog (13)</a></li>
+      <li><a href="detail.html?id=1" class="aqil_aktif_link">Detail Produk</a></li>
+      <li><a href="promo.html">Promo Paket</a></li>
+      <li><a href="panduan.html">Cek Cocok</a></li>
+      <li><a href="tentang.html">Tentang Kami</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main class="aqil_container">
+    <a href="produk.html" class="aqil_link_kembali">&larr; Kembali ke Katalog (13 Produk)</a>
+
+    <!-- Wadah ini akan diisi otomatis oleh JS sesuai produk yang diklik -->
+    <div id="aqil_wadah_detail" class="aqil_detail_box"></div>
+  </main>
+
+  <footer id="aqil_footer">
+    <p>&copy; 2026 Aqil Hair Oil - Pemrograman Internet UTS. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aqil_script.js"></script>
+</body>
+</html>

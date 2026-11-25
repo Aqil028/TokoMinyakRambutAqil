@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Produk - Aqil Hair Oil</title>
+  <!-- CSS Utama (Desktop / Default) -->
+  <link rel="stylesheet" href="aqil_style.css">
+
+  <!-- CSS Terpisah Khusus Mobile -->
+  <link rel="stylesheet" href="aqil_mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+
+  <!-- Navigasi 7 Halaman -->
+  <nav id="aqil_navbar">
+    <a href="index.html" class="aqil_logo">AQIL HAIR OIL</a>
+    <button class="aqil_hamburger" id="aqil_btn_menu">&#9776;</button>
+    <ul class="aqil_menu" id="aqil_nav_list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html" class="aqil_aktif_link">Katalog (13)</a></li>
+      <li><a href="detail.html?id=1">Detail Produk</a></li>
+      <li><a href="promo.html">Promo Paket</a></li>
+      <li><a href="panduan.html">Cek Cocok</a></li>
+      <li><a href="tentang.html">Tentang Kami</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main class="aqil_container">
+    <h1 class="aqil_judul_halaman">Katalog Lengkap Minyak Rambut</h1>
+    <p class="aqil_subjudul">Tersedia 13 pilihan paket satuan maupun bundling aroma Bubblegum, Vanilla, dan Lemon Yuzu.</p>
+
+    <!-- Tombol Filter JS -->
+    <div class="aqil_filter_box">
+      <button class="aqil_btn_filter aqil_aktif" onclick="aqilFilterProduk('semua', this)">Semua Paket (13)</button>
+      <button class="aqil_btn_filter" onclick="aqilFilterProduk('satuan', this)">Satuan / 1 Botol (3)</button>
+      <button class="aqil_btn_filter" onclick="aqilFilterProduk('duo', this)">Paket 2 Botol (6)</button>
+      <button class="aqil_btn_filter" onclick="aqilFilterProduk('trio', this)">Paket 3 Botol (4)</button>
+    </div>
+
+    <!-- Grid 13 Produk -->
+    <div class="aqil_grid_produk" id="aqil_daftar_produk">
+      
+      <!-- 1-3: SATUAN (1 BOTOL TIAP VARIAN) -->
+      <div class="aqil_card" data-kategori="satuan">
+        <div>
+          <span class="aqil_badge">Satuan - 1 Botol</span>
+          <div class="aqil_img_placeholder">Foto 1 Botol Bubblegum</div>
+          <h3>1 Botol Varian Bubblegum</h3>
+          <p>Aroma permen karet manis yang ceria, menjaga kelembapan rambut seharian.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 35.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=1" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="satuan">
+        <div>
+          <span class="aqil_badge">Satuan - 1 Botol</span>
+          <div class="aqil_img_placeholder">Foto 1 Botol Vanilla</div>
+          <h3>1 Botol Varian Vanilla</h3>
+          <p>Aroma vanilla lembut dan elegan, membuat rambut berkilau alami.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 35.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=2" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+         </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="satuan">
+        <div>
+          <span class="aqil_badge">Satuan - 1 Botol</span>
+          <div class="aqil_img_placeholder">Foto 1 Botol Lemon Yuzu</div>
+          <h3>1 Botol Varian Lemon Yuzu</h3>
+          <p>Kesegaran sitrus jeruk yuzu Jepang, anti lepek untuk aktivitas luar ruangan.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 35.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=3" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-6: PAKET 2 BOTOL VARIAN SAMA -->
+      <div class="aqil_card" data-kategori="duo">
+        <div>
+          <span class="aqil_badge">Paket Duo - 2 Botol</span>
+          <div class="aqil_img_placeholder">Foto 2 Botol Bubblegum</div>
+          <h3>Paket 2 Botol Bubblegum</h3>
+          <p>Stok ganda khusus pecinta aroma manis segar Bubblegum. Lebih hemat!</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 65.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=4" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="duo">
+        <div>
+          <span class="aqil_badge">Paket Duo - 2 Botol</span>
+          <div class="aqil_img_placeholder">Foto 2 Botol Vanilla</div>
+          <h3>Paket 2 Botol Vanilla</h3>
+          <p>Dua botol varian Vanilla untuk pemakaian rutin lebih lama.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 65.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=5" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="duo">
+        <div>
+          <span class="aqil_badge">Paket Duo - 2 Botol</span>
+          <div class="aqil_img_placeholder">Foto 2 Botol Lemon Yuzu</div>
+          <h3>Paket 2 Botol Lemon Yuzu</h3>
+          <p>Dua botol kesegaran ekstra Lemon Yuzu agar rambut bebas bau matahari.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 65.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=6" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7-9: PAKET 2 BOTOL MIX VARIAN -->
+      <div class="aqil_card" data-kategori="duo">
+        <div>
+          <span class="aqil_badge">Paket Duo Mix - 2 Botol</span>
+          <div class="aqil_img_placeholder">Foto Bubblegum & Vanilla</div>
+          <h3>Paket 2 Botol Bubblegum & Vanilla</h3>
+          <p>Kombinasi dua aroma manis yang lembut dan menenangkan.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 65.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=7" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="duo">
+        <div>
+          <span class="aqil_badge">Paket Duo Mix - 2 Botol</span>
+          <div class="aqil_img_placeholder">Foto Lemon Yuzu & Vanilla</div>
+          <h3>Paket 2 Botol Lemon Yuzu & Vanilla</h3>
+          <p>Perpaduan segarnya sitrus untuk siang hari dan hangatnya vanilla untuk malam.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 65.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=8" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="duo">
+        <div>
+          <span class="aqil_badge">Paket Duo Mix - 2 Botol</span>
+          <div class="aqil_img_placeholder">Foto Bubblegum & Lemon Yuzu</div>
+          <h3>Paket 2 Botol Bubblegum & Lemon Yuzu</h3>
+          <p>Kombinasi aroma paling energik, ceria, dan menyegarkan sepanjang hari.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 65.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=9" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10-13: PAKET 3 BOTOL (ALL VARIAN & 3 BOTOL TIAP VARIAN) -->
+      <div class="aqil_card" data-kategori="trio">
+        <div>
+          <span class="aqil_badge">Best Seller - 3 Botol</span>
+          <div class="aqil_img_placeholder">Foto 3 Botol All Varian</div>
+          <h3>Paket 3 Botol All Varian</h3>
+          <p>Lengkap! Dapat 1 Bubblegum + 1 Vanilla + 1 Lemon Yuzu dalam satu paket.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 95.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=10" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="trio">
+        <div>
+          <span class="aqil_badge">Paket Trio - 3 Botol</span>
+          <div class="aqil_img_placeholder">Foto 3 Botol Bubblegum</div>
+          <h3>Paket 3 Botol Bubblegum</h3>
+          <p>Paket hemat 3 botol sekaligus khusus untuk penggemar berat varian Bubblegum.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 95.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=11" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="trio">
+        <div>
+          <span class="aqil_badge">Paket Trio - 3 Botol</span>
+          <div class="aqil_img_placeholder">Foto 3 Botol Vanilla</div>
+          <h3>Paket 3 Botol Vanilla</h3>
+          <p>Paket stok bulanan 3 botol varian Vanilla dengan harga paling ekonomis.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 95.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=12" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aqil_card" data-kategori="trio">
+        <div>
+          <span class="aqil_badge">Paket Trio - 3 Botol</span>
+          <div class="aqil_img_placeholder">Foto 3 Botol Lemon Yuzu</div>
+          <h3>Paket 3 Botol Lemon Yuzu</h3>
+          <p>Paket hemat 3 botol Lemon Yuzu untuk kesegaran rambut maksimal tiap hari.</p>
+        </div>
+        <div>
+          <div class="aqil_harga">Rp 95.000</div>
+          <div class="aqil_btn_group">
+          <a href="detail.html?id=13" class="aqil_btn_detail">Detail</a>
+          <a href="contact.html" class="aqil_btn_pesan">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="aqil_footer">
+    <p>&copy; 2026 Aqil Hair Oil - Pemrograman Internet UTS. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aqil_script.js"></script>
+</body>
+</html>

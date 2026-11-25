@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami &amp; Cara Pakai - Aqil Hair Oil</title>
+  <!-- CSS Utama (Desktop / Default) -->
+  <link rel="stylesheet" href="aqil_style.css">
+
+  <!-- CSS Terpisah Khusus Mobile -->
+  <link rel="stylesheet" href="aqil_mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+
+  <nav id="aqil_navbar">
+    <a href="index.html" class="aqil_logo">AQIL HAIR OIL</a>
+    <button class="aqil_hamburger" id="aqil_btn_menu">&#9776;</button>
+    <ul class="aqil_menu" id="aqil_nav_list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Katalog (13)</a></li>
+      <li><a href="detail.html?id=1">Detail Produk</a></li>
+      <li><a href="promo.html">Promo Paket</a></li>
+      <li><a href="panduan.html">Cek Cocok</a></li>
+      <li><a href="tentang.html" class="aqil_aktif_link">Tentang Kami</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main class="aqil_container">
+    <h1 class="aqil_judul_halaman">Tentang Aqil Hair Oil</h1>
+    <p class="aqil_subjudul">Solusi perawatan dan penataan rambut harian yang ringan, sehat, dan wangi sepanjang hari.</p>
+
+    <!-- Kotak 1: Cerita Brand -->
+    <div class="aqil_tentang_box">
+      <h2>Cerita Brand Kami</h2>
+      <p><strong>Aqil Hair Oil</strong> didirikan pada tahun 2026 di Kota Tasikmalaya dengan tujuan menghadirkan produk perawatan rambut yang tidak hanya membuat rambut mudah diatur, tetapi juga menutrisi akar dan batang rambut dari dalam.</p>
+      <p>Berbeda dengan produk penata rambut berbahan kimia keras yang membuat rambut kaku dan berketombe, Aqil Hair Oil menggunakan campuran minyak nabati murni dengan tiga pilihan aroma favorit anak muda: <strong>Bubblegum, Vanilla, dan Lemon Yuzu</strong>.</p>
+    </div>
+
+    <!-- Kotak 2: 4 Langkah Cara Pakai -->
+    <h2 class="aqil_judul_halaman" style="margin-bottom: 20px;">4 Langkah Mudah Cara Pemakaian</h2>
+    <div class="aqil_langkah_grid">
+      <div class="aqil_langkah_card">
+        <div class="aqil_nomor_langkah">1</div>
+        <h3>Teteskan Secukupnya</h3>
+        <p>Tuangkan 2–4 tetes Aqil Hair Oil ke telapak tangan sesuai ketebalan rambut.</p>
+      </div>
+      <div class="aqil_langkah_card">
+        <div class="aqil_nomor_langkah">2</div>
+        <h3>Ratakan di Tangan</h3>
+        <p>Gosok perlahan kedua telapak tangan hingga minyak terasa hangat dan merata.</p>
+      </div>
+      <div class="aqil_langkah_card">
+        <div class="aqil_nomor_langkah">3</div>
+        <h3>Usapkan ke Rambut</h3>
+        <p>Aplikasikan pada batang hingga ujung rambut dalam kondisi kering atau setengah basah.</p>
+      </div>
+      <div class="aqil_langkah_card">
+        <div class="aqil_nomor_langkah">4</div>
+        <h3>Tata Sesuai Gaya</h3>
+        <p>Sisir atau tata rambut dengan jari. Rambut tampak berkilau, lembut, dan wangi seharian.</p>
+      </div>
+    </div>
+
+    <!-- Kotak 3: FAQ Accordion -->
+    <h2 class="aqil_judul_halaman" style="margin-bottom: 20px;">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+    <div class="aqil_faq_box">
+      <div class="aqil_faq_item">
+        <button class="aqil_faq_tanya" onclick="aqilToggleFaq(this)">
+          <span>Apakah Aqil Hair Oil membuat rambut menjadi lepek atau berminyak?</span>
+          <span>&#9662;</span>
+        </button>
+        <div class="aqil_faq_jawab">
+          <p>Tidak. Formula kami dirancang ringan dan cepat meresap ke batang rambut sehingga memberikan kilau sehat tanpa terasa lengket atau lepek.</p>
+        </div>
+      </div>
+
+      <div class="aqil_faq_item">
+        <button class="aqil_faq_tanya" onclick="aqilToggleFaq(this)">
+          <span>Apakah aman digunakan setiap hari dan untuk semua jenis rambut?</span>
+          <span>&#9662;</span>
+        </button>
+        <div class="aqil_faq_jawab">
+          <p>Sangat aman digunakan setiap hari oleh pria maupun wanita, baik untuk rambut lurus, bergelombang, keriting, maupun rambut yang diwarnai.</p>
+        </div>
+      </div>
+
+      <div class="aqil_faq_item">
+        <button class="aqil_faq_tanya" onclick="aqilToggleFaq(this)">
+          <span>Berapa lama ketahanan aroma dari masing-masing varian?</span>
+          <span>&#9662;</span>
+        </button>
+        <div class="aqil_faq_jawab">
+          <p>Aroma Bubblegum, Vanilla, dan Lemon Yuzu mampu bertahan antara 6 hingga 8 jam tergantung aktivitas di dalam atau luar ruangan.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="aqil_footer">
+    <p>&copy; 2026 Aqil Hair Oil - Pemrograman Internet UTS. All Rights Reserved.</p>
+  </footer>
+
+  <script src="aqil_script.js"></script>
+</body>
+</html>
